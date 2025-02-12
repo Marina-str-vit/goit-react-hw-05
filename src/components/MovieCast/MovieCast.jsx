@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { getMovieCredits } from "../ApiService/Api";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loading from "../Loading/Loading";
+import noPhoto from "../../components/images/no_photo.jpg"
+
 
 export default function MovieCast() {
   const { movieId } = useParams();
@@ -45,7 +47,8 @@ export default function MovieCast() {
                 src={
                   actor.profile_path
                     ? `https://image.tmdb.org/t/p/w500/${actor.profile_path}`
-                    : "/src/components/images/no_photo.jpg"
+                    : noPhoto
+
                 }
                 alt={actor.name}
               />

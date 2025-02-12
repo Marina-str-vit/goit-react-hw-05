@@ -5,6 +5,7 @@ import s from "./MovieDetailsPage.module.css";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/Loading/Loading";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import noPhoto from "../../components/images/no_photo.jpg"
 
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
@@ -61,7 +62,7 @@ return (
               src={
                 movie.backdrop_path
                   ? `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
-                  : "/src/components/images/no_photo.jpg"
+                  : noPhoto
               }
               alt={movie.original_title}
             />

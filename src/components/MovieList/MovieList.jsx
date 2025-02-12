@@ -1,5 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import s from "./MovieList.module.css"
+import noPhoto from "../../components/images/no_photo.jpg"
+
 
 export default function MovieList({ movies = [], trendMovie = [] }) {
   const location = useLocation();
@@ -15,7 +17,8 @@ export default function MovieList({ movies = [], trendMovie = [] }) {
                 src={
                   trend.backdrop_path
                     ? `https://image.tmdb.org/t/p/original/${trend.backdrop_path}`
-                    : "/src/components/images/no_photo.jpg"
+                    :  noPhoto
+
                 }
                 alt={trend.original_title}
               />
@@ -43,7 +46,8 @@ export default function MovieList({ movies = [], trendMovie = [] }) {
                 src={
                   movie.backdrop_path
                     ? `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
-                    : "/src/components/images/no_photo.jpg"
+                    : noPhoto 
+
                 }
                 alt={movie.original_title}
               />
