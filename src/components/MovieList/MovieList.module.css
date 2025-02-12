@@ -1,0 +1,41 @@
+.movieList {
+  margin-bottom: 20px;
+}
+
+.movieList.title {
+  font-size: 20px;
+}
+
+.trendMovieWrap {
+  padding: 50px 50px 0px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+} 
+
+ .items {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img{
+	height: 320px;
+	width: 250px;
+  object-fit: cover;
+	border-radius: 4px;
+cursor: pointer;
+}
+
+.name_movie {
+  font-weight: 500;
+  color: black;
+}
+
+.name_movie:hover, .name_movie:focus {
+  color: rgb(158, 18, 171);
+}

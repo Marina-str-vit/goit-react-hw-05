@@ -1,0 +1,23 @@
+.navWrap {
+  display: flex;
+  column-gap: 70px;
+  padding: 20px;
+  background-color: #ecf3f1;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 80px;
+  text-shadow: -2px -2px 2px rgba(46, 15, 95, 0.5);
+margin-bottom: 20px;
+border-radius: 8px;
+}
+
+.navWrap.link {
+  color: black;
+}
+
+.active {
+  font-size: 40px;
+  font-weight: bold;
+  color: #eb0b0b;
+  text-shadow: 9px 9px 8px rgba(117, 2, 2, 0.9);
+}

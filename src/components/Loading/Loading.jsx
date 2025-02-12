@@ -1,9 +1,9 @@
 import { ColorRing } from "react-loader-spinner";
-import s from "./Loader.module.css"
+import s from "./Loading.module.css"
 
-const Loader = () => {
+const Loading = () => {
 	return (
-		<div className={s.loader}>
+		<div className={s.loading}>
     <ColorRing
       visible={true}
       height="80"
@@ -15,4 +15,4 @@ const Loader = () => {
     /></div>
   );
 }
-export default Loader
+export default Loading

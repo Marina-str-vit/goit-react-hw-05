@@ -1,0 +1,12 @@
+.text {
+  color: #070707;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 50px;
+}
+
+.link {
+  color: #f01a1a;
+  font-weight: bold;
+  font-size: 40px;
+}
