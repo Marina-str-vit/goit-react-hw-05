@@ -22,11 +22,8 @@ export default function MoviesPage() {
   };
 
   useEffect(() => {
-    if (query === "") {
-      setIsError(true);
-      return;
-    }
-    async function fetchMovies() {
+ // 1) !! можна чере const, і тоді if виносимо окремо, можна чере функцію тоді спочатку пишемо if, а потім async функцію
+  const fetchMovies =  async () => {
       try {
         setIsLoading(true);
         setIsError(false);
@@ -52,6 +49,11 @@ export default function MoviesPage() {
     }
     fetchMovies();
   }, [query, page]);
+// 2)!! тут умова окремо, але на сторінці MovieDetailsPage вона йде одразу після useEffect(() => {
+  if (query === "") {
+    setIsError(true);
+    return;
+  }
 
   const handleLoadMore = () => {
     setPage((prevPage) => prevPage + 1);
