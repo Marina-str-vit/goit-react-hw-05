@@ -11,27 +11,28 @@ export default function MovieList({ movies = [], trendMovie = [] }) {
         <ul className={s.trendMovieWrap}>
           {trendMovie.map((trend) => (
             <li className={s.items} key={trend.id}>
-              <Link to={`/movies/${trend.id}`}>
+              <Link to={`/movies/${trend.id}`} state={location} className={s.name_movie}>
               <img
                 className={s.img}
                 src={
                   trend.backdrop_path
                     ? `https://image.tmdb.org/t/p/original/${trend.backdrop_path}`
-                    :  noPhoto
-
+                    :  noPhoto // фото обов'язково треба імпортувати, бо його на Верселі не видно
                 }
                 alt={trend.original_title}
               />
-              </Link>
+    {/* прибрала зайвий Link, достатньо одного на весь <li> !! АЛЕ слідкувати за семантикою: ul--li--Link*/}
+              {/* </Link>
               <p className={s.name_movie}>
                 <Link
                   className={s.name_movie}
                   to={`/movies/${trend.id}`}
                   state={location}
-                >
-                  {trend.original_title}
+                > */}
+                  <p className={s.name_movie}>
+                  {trend.original_title}</p>
                 </Link>
-              </p>
+              {/* </p> */}
             </li>
           ))}
         </ul>

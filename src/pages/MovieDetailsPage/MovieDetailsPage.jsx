@@ -4,7 +4,7 @@ import { getMovieById } from "../../components/ApiService/Api";
 import s from "./MovieDetailsPage.module.css";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/Loading/Loading";
-import { IoMdArrowRoundBack } from "react-icons/io";
+import { ImArrowLeft2 } from "react-icons/im";
 import noPhoto from "../../components/images/no_photo.jpg"
 
 export default function MovieDetailsPage() {
@@ -47,8 +47,8 @@ useEffect(() => {
 return (
   <>
       <Link to={backLinkRef.current} className={s.btn}>
-        <IoMdArrowRoundBack className={s.ioMdArrowRoundBack}/>
-      </Link>
+        <ImArrowLeft2  className={s.ImArrowLeft2}/>
+        Go back</Link>
    <div className={s.container}>
     {isError && <ErrorMessage />}
     {isLoading && <Loading />}

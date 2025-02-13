@@ -17,7 +17,11 @@ export default function MoviesPage() {
   const [totalPages, setTotalPages] = useState(0);
 
   const handleSubmit = (movie) => {
-    setSearchParams({ query: movie });
+    //можна писати або так
+    searchParams.set({ query: movie });//отримуємо дані
+    setSearchParams(searchParams);
+    //або лише однією строкою
+    // setSearchParams({ query: movie });
     setMovies([]);
   };
 
